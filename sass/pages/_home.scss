@@ -1,0 +1,44 @@
+.section-about,
+.section-products,
+.section-team,
+.section-experience {
+    position: relative;
+    padding: 6rem 15rem;
+    @include respond(tab-land) {
+        padding: 6rem 15rem;
+    }
+    @include respond(tab-port) {
+        padding: 6rem 10rem;
+    }
+    @include respond(phone) {
+        padding: 4rem 4rem;
+    }
+
+    .row {
+        position: relative;
+    }
+    
+    // .btn {
+    //     position: absolute;
+    //     right: 50%;
+    //     transform: translateX(50%);
+    //     margin-top: 1.6rem;
+    // }
+}
+
+.section-products,
+.section-experience {
+    background-color: $color-blue-light;
+}
+
+// .decor-footer {
+//     width: 20rem;
+//     position: absolute;
+//     bottom: -1rem;
+//     right: 2rem;
+//     transform-origin: bottom right;
+//     transition: all 0.5s ease-out;
+//     @include respond(tab-land){bottom: -15rem;}
+// }
+
+

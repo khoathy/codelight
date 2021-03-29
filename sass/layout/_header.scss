@@ -1,0 +1,104 @@
+.header {
+    position: relative;
+    height: 95vh;
+    overflow: hidden;
+
+    @include respond(phone) {
+        height: 100vh;
+    }
+
+    &__textbox {
+        max-width: 55rem;
+        width: fit-content;
+        position: absolute;
+        top: 35%;
+        left: 12%;
+        transform: translateZ(0);
+
+        @include respond(tab-port) {
+            top: 20%;
+            width: 85vw;
+        }
+
+        &-content {
+            color: $color-gray-dark;
+        }
+
+        &-text {
+            color: $color-gray;
+            margin-top: 3rem;
+            font-size: 2.2rem;
+            line-height: 1.6;
+
+            @include respond(tab-land) {
+                width: 45vw;
+            }
+            @include respond(tab-port) {
+                width: 85vw;
+            }
+
+        }
+    }
+
+//     &__display {
+//         width: 42%;
+//         position: absolute;
+//         bottom: 3%;
+//         right: 5%;
+
+//         @include respond(tab-land) {
+//             right: 5%;
+//             width: 36%;
+//         }
+//         @include respond(tab-port) {
+//             height: 45vh;
+//             width: auto;
+//             right: 15%;
+//         }   
+//     }
+
+    
+//     &__back,
+//     &__fore {
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         background-repeat: no-repeat;
+//         background-position: 100% 100%;
+//     } 
+
+//     &__back {
+//         bottom: 0;
+//         background-size: cover;
+//         background-image: url(../img/back.svg);
+
+//         @include respond(tab-land) {
+//             background-size: 100%;
+//         }
+//     }
+    
+//     &__fore {
+//         position: absolute;
+//         background-size: 14%;
+//         bottom: -11rem;
+//         height: 100%;  
+//         width: 100%;
+//         background-position : 50% 100%;
+//         background-image: url(../img/fore-bg.svg);
+//         image-rendering: crisp-edges;
+//         image-rendering: -moz-crisp-edges;          /* Firefox */
+//         image-rendering: -o-crisp-edges;            /* Opera */
+//         image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+//         -ms-interpolation-mode: nearest-neighbor;   /* IE (non-standard property) */
+        
+//         @include respond(tab-land) {
+//             bottom: -10rem;
+//         }
+//         @include respond(tab-port) {
+//             bottom: -8rem;
+//         }
+//         @include respond(phone) {
+//             background-size: 55rem;
+//         }
+//     }
+}
