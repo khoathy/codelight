@@ -2,6 +2,7 @@
     position: relative;
     height: 95vh;
     overflow: hidden;
+    z-index: 1;
 
     @include respond(phone) {
         height: 100vh;

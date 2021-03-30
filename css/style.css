@@ -174,8 +174,8 @@ input[type=submit] {
   font-weight: 300;
   text-decoration: none;
   border-radius: 7rem;
-  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
-  transition: background-color 0.2s, border 0.2s, color 0.2s; }
+  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s, transform 0.3s;
+  transition: background-color 0.2s, border 0.2s, color 0.2s, transform 0.3s; }
 
 .btn-full,
 .btn-full:link,
@@ -206,11 +206,20 @@ input[type=submit]:active {
   color: #fff;
   border: 1px solid #0041c4; }
 
+.btn-full:hover,
+.btn-outline:hover {
+  transform: translateY(-0.5rem); }
+  @media only screen and (max-width: 56.25em) {
+    .btn-full:hover,
+    .btn-outline:hover {
+      transform: translateY(-1rem) rotate(-2deg); } }
+
 .card {
   position: relative;
   transition: transform 0.4s ease-in-out; }
   .card:hover {
-    transform: translateY(-0.5rem); }
+    transform: translateY(-0.5rem);
+    transition: all 0.5s ease-in-out; }
     @media only screen and (max-width: 56.25em) {
       .card:hover {
         transform: translateY(-1rem) rotate(-2deg); } }
@@ -218,11 +227,11 @@ input[type=submit]:active {
     .card:not(:last-child) {
       margin-bottom: 2.5rem; } }
   .card__wrapper {
+    min-height: 37rem;
     margin: 1rem 2rem;
     position: relative;
     border-radius: 2rem;
     padding: 2rem;
-    background-color: white;
     color: #505369;
     text-align: center; }
     @media only screen and (max-width: 37.5em) {
@@ -323,10 +332,9 @@ input[type=submit]:active {
         min-height: 0; } }
   .brand__wrapper {
     height: 5rem;
-    margin: 1rem 2rem; }
+    margin: 2rem 2rem; }
   .brand__img {
     transition: transform 1s ease-out;
-    border: 2px solid #e4edfd;
     height: 100%; }
     @media only screen and (max-width: 37.5em) {
       .brand__img {
@@ -419,7 +427,8 @@ input[type=submit]:active {
 .header {
   position: relative;
   height: 95vh;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 1; }
   @media only screen and (max-width: 37.5em) {
     .header {
       height: 100vh; } }
@@ -466,7 +475,7 @@ input[type=submit]:active {
         opacity: 0;
         visibility: hidden;
         z-index: 9999;
-        background: rgba(228, 237, 253, 0.95);
+        background: rgba(239, 246, 255, 0.95);
         padding: 2rem;
         border-radius: 5px;
         box-shadow: 1px 2px 0.5rem rgba(80, 83, 105, 0.2);
@@ -586,8 +595,8 @@ input[type=submit]:active {
   z-index: -1;
   padding: 4rem;
   padding-top: 6rem;
-  background-color: #0b3280;
-  color: #e4edfd;
+  background-color: #eff6ff;
+  color: #24264b;
   font-size: 1.4rem;
   font-weight: 400; }
   @media only screen and (max-width: 37.5em) {
@@ -615,13 +624,13 @@ input[type=submit]:active {
     list-style: none; }
     .footer__list a {
       text-decoration: none;
-      color: #a6b2c7;
+      color: #505369;
       font-weight: 300; }
       .footer__list a:hover {
         color: #ff914d; }
   .footer__logo {
-    width: 70%;
-    opacity: 0.8;
+    width: 80%;
+    opacity: 0.9;
     margin: 1rem auto;
     display: block; }
     @media only screen and (max-width: 37.5em) {
@@ -630,7 +639,8 @@ input[type=submit]:active {
   .footer__icon {
     display: inline-block;
     max-width: 1.2rem;
-    margin-right: 2px; }
+    margin-right: 2px;
+    color: red; }
   .footer__text {
     display: inline-block; }
 
@@ -649,7 +659,8 @@ input[type=submit]:active {
 .section-team,
 .section-experience {
   position: relative;
-  padding: 6rem 15rem; }
+  padding: 6rem 15rem;
+  z-index: 1; }
   @media only screen and (max-width: 75em) {
     .section-about,
     .section-products,
@@ -674,6 +685,29 @@ input[type=submit]:active {
   .section-experience .row {
     position: relative; }
 
-.section-products,
-.section-experience {
-  background-color: #e4edfd; }
+.section-about {
+  padding-bottom: 10rem; }
+
+.section-products {
+  background-color: #eff6ff; }
+
+.section-team {
+  padding-top: 15rem; }
+
+.svg-background {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  fill: #eff6ff;
+  color: #eff6ff;
+  left: 0;
+  right: 0;
+  z-index: -1; }
+
+.svg-top {
+  bottom: 0;
+  height: 15rem; }
+
+.svg-btm {
+  bottom: -10rem;
+  height: 10rem; }

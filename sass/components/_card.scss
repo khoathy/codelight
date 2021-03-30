@@ -4,6 +4,7 @@
 
     &:hover {
         transform: translateY(-0.5rem);
+        transition: all 0.5s ease-in-out;
         @include respond(tab-port){
             transform: translateY(-1rem) rotate(-2deg);
         }
@@ -16,14 +17,15 @@
     }   
 
     &__wrapper {
-        // min-height: 10rem;
+        min-height: 37rem;
         margin: 1rem 2rem;
         position: relative;
         border-radius: 2rem;
         padding: 2rem;
-        background-color: white;
         color: $color-gray;
         text-align: center;
+        // background-color: white;
+        // box-shadow: 0rem 0.5rem 3rem 0.5rem rgba($color-gray,0.1);
 
         @include respond(phone){
             width: 90% !important;

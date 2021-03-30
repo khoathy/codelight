@@ -4,6 +4,7 @@
 .section-experience {
     position: relative;
     padding: 6rem 15rem;
+    z-index: 1;
     @include respond(tab-land) {
         padding: 6rem 15rem;
     }
@@ -26,10 +27,40 @@
     // }
 }
 
-.section-products,
-.section-experience {
+.section-about {
+    padding-bottom: 10rem;
+}
+
+.section-products {
     background-color: $color-blue-light;
 }
+
+.section-team {
+    padding-top: 15rem;
+}
+
+.svg-background {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    fill: $color-blue-light;
+    color: $color-blue-light;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.svg-top {
+    bottom: 0;
+    height: 15rem;
+}
+
+.svg-btm {
+    bottom: -10rem;
+    height: 10rem;
+}
+
+
 
 // .decor-footer {
 //     width: 20rem;

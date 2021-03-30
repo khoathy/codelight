@@ -8,8 +8,8 @@ input[type=submit]
     font-weight: 300;
     text-decoration: none;
     border-radius: 7rem;
-    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
-    transition: background-color 0.2s, border 0.2s, color 0.2s; 
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s, transform 0.3s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s, transform 0.3s; 
 }
 
 .btn-full,
@@ -32,9 +32,7 @@ input[type=submit]:active{
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid rgba($color-primary-light,0.5);
-   
-    
+    border: 1px solid rgba($color-primary-light,0.5); 
 }
 
 .btn-outline,
@@ -49,4 +47,13 @@ input[type=submit]:active{
 .btn-outline:active {
     color : $color-white;
     border: 1px solid $color-primary;
+}
+
+
+.btn-full:hover,
+.btn-outline:hover {
+    transform: translateY(-0.5rem);
+    @include respond(tab-port){
+        transform: translateY(-1rem) rotate(-2deg);
+    }    
 }
